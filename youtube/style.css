@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+:root {
+  --background-color: #ffd;
+  --icon-color: rgba(0, 0, 0, 0.5);
+}
+
+body {
+  /* background-color: var(--background-color); */
+  overflow: hidden;
+}
+
+.h-center {
+  display: flex;
+  justify-content: center;
+}
+.v-center {
+  display: flex;
+  align-items: center;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.yt-icon {
+  font-size: 1.25rem;
+}
+.yt-icon:hover {
+  cursor: pointer;
+}
+/* .yt-icon:active {
+  padding: 10px 12px;
+  border-radius: 50%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+} */
+.yt-brand .fa-bars {
+  margin-right: 15px;
+  color: var(--icon-color);
+}
+.yt-brand .fa-youtube {
+  color: red;
+  margin-right: 8px;
+}
+.yt-brand span {
+  font-weight: bold;
+}
+.yt-brand span sup {
+  font-size: 0.75rem;
+}
+
+.search-item {
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
+  flex-grow: 1;
+  display: flex;
+}
+.search-item input {
+  border: none;
+  padding: 10px 20px;
+  flex-basis: 90%;
+}
+.search-item .search-btn {
+  border: none;
+  padding: 10px 20px;
+  color: var(--icon-color);
+  flex-basis: 10%;
+}
+.yt-search {
+  flex-grow: 1;
+  padding-left: 20px;
+}
+.yt-search > i {
+  padding: 10px 20px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.yt-tools i {
+  padding: 10px 15px;
+  color: var(--icon-color);
+}
+.yt-tools .fa-user {
+  background: rgb(107, 45, 165);
+  color: white;
+  padding: 10px 12px;
+  border-radius: 50%;
+}
+
+.main {
+  /* border: 5px solid black; */
+  height: 100vh;
+  display: flex;
+}
+.main .left {
+  /* border: 5px solid blue; */
+  height: 100vh;
+  flex-basis: 20%;
+  padding-left: 15px;
+  max-height: 580px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+/* .main .left:hover {
+  overflow-y: auto;
+  overflow-x: hidden;
+} */
+.main .right {
+  /* border: 5px solid red; */
+  height: 100vh;
+  flex-basis: 80%;
+}
+.sidebar-options {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.sidebar-options .sidebar-option {
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  transition: background 250ms;
+}
+.sidebar-option i {
+  margin-right: 20px;
+  margin-left: 5px;
+  color: var(--icon-color);
+
+  transition: color 250ms;
+}
+.sidebar-option span {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.sidebar-option:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+.sidebar-option:hover i {
+  color: red;
+}
+.option-heading {
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+/* SCROLLBAR CSS */
+.main .left::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.main .left::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.02);
+}
+
+.main .left::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+/* \SCROLLBAR CSS */
+
+.right {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 580px;
+  overflow: auto;
+}
+.yt-video-card {
+  flex-basis: 25%;
+  min-width: 250px;
+  padding: 20px;
+}
+.yt-video-card iframe {
+  width: 100%;
+  height: 200px;
+}
+.video-content {
+  display: flex;
+  position: relative;
+}
+.video-desc h1 {
+  font-size: 1rem;
+}
+.channel-name,
+.views,
+.know-more {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.5);
+}
+.channel-brand img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 2px;
+}
+
+.video-content > div {
+  flex-grow: 1;
+}
+
+.know-more {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  display: none;
+}
+.yt-video-card:hover .know-more {
+  display: block;
+}
